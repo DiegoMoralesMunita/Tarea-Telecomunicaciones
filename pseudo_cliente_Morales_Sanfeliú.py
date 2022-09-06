@@ -137,5 +137,3 @@ t = time.time()
 escucha_yarvis('audio2.1')
 end = time.time() - t
 print('Tiempo de ejecución: '+str(end)+' [s]')
-
-# Hola
