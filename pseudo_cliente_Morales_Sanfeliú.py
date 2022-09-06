@@ -67,7 +67,7 @@ def escucha_yarvis(archivo):
     mensaje = "principalXXX"
 
     #Abrir y leer audio
-    data = open(archivo+'.wav', encoding='iso-8859-1')
+    data = open('/audios/'+archivo+'.wav', encoding='iso-8859-1')
     data_1 = str(data.read())
 
     #calcular tamanho del audio y concatenar al string
