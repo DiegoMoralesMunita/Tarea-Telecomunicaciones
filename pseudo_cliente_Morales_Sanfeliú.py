@@ -49,8 +49,11 @@ import time as time
 # socket.send( )       #manda data al receptor
 # socket.recv( )       #el emisor recibe la data
 
+# socke.bind((host, puerto))
+# socke.listen(5)
+# clientsocket, address = socke.accept()
+# print(f'conection from {address} has been established')
 
-#pseudo codigo
 
 def escucha_yarvis(archivo):
 
@@ -67,7 +70,6 @@ def escucha_yarvis(archivo):
     data = open(archivo+'.wav', encoding='iso-8859-1')
     data_1 = str(data.read())
 
-
     #calcular tamanho del audio y concatenar al string
     size = len(data_1)
     mensaje = mensaje + str(size)
@@ -83,10 +85,6 @@ def escucha_yarvis(archivo):
 
     #establecer conexion socket TCP al servidor en IP y puerto informados
     socke = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # socke.bind((host, puerto))
-    # socke.listen(5)
-    # clientsocket, address = socke.accept()
-    # print(f'conection from {address} has been established')
     socke.connect((host, puerto))
 
     #enviar mensaje
